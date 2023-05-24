@@ -51,9 +51,9 @@ namespace sentry_communicator
             Robot_ID = frame.data[0];
             Keyboard = frame.data[1];
             data = (frame.data[2] << 8u) | frame.data[3];
-            float vel_x = uint2float(data, -20, 20, 16);
+            float vel_x = uint2float(data, -30, 30, 16);
             data = (frame.data[4] << 8u) | frame.data[5];
-            float vel_y = uint2float(data, -20, 20, 16);
+            float vel_y = uint2float(data, -30, 30, 16);
             lower_com_data.x = vel_x;
             lower_com_data.y = vel_y;
             lower_com_data.z = Keyboard;
